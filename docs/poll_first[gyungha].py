@@ -30,8 +30,7 @@ list_question = ["상품의 품질에 대해 어떻게 생각하시나요?",
 list_answer =  ["좋음", "중간", "좋아지길"]
 
 
-for num_question in range(len(list_question)) :
-    print("{}. {}".format(num_question + 1, list_question[num_question]))
+for num_question in range(len(list_question)) : 
     for num_answer in range(len(list_answer)) :
         print("{}. {}".format(num_answer + 1, list_answer[num_answer]), end="  ")
     if num_question != 3 :
@@ -40,4 +39,17 @@ for num_question in range(len(list_question)) :
     elif num_question == 3 :
         break
 
+# 입력하신 코드는 Python 언어로 작성된 것입니다. 이 코드를 설명드리겠습니다.
 
+# 먼저, 'list_question'과 'list_answer'라는 두 개의 리스트가 있다고 가정하겠습니다.
+
+# for num_question in range(len(list_question)) :
+# 이 부분은 'list_question'이라는 리스트의 길이만큼 반복을 할 것이라는 뜻입니다. 'len' 함수는 리스트의 길이를 반환하고, 'range' 함수는 0부터 인자로 받은 숫자 - 1 까지의 일련의 정수를 반환합니다. 따라서 이 코드는 'list_question'의 모든 요소에 대하여 반복을 수행하게 됩니다.
+
+# for num_answer in range(len(list_answer)) :
+# 이 부분은 내부 반복문으로, 'list_answer'라는 리스트의 길이만큼 반복을 할 것이라는 뜻입니다. 이 코드는 'list_answer'의 모든 요소에 대하여 반복을 수행하게 됩니다.
+
+# print("{}. {}".format(num_answer + 1, list_answer[num_answer]), end="  ")
+# 'print' 함수는 정보를 화면에 출력하는 역할을 합니다. 이 코드는 'list_answer'의 각 요소를 순서대로 화면에 출력하며, 각 요소 앞에는 1부터 시작하는 숫자가 붙습니다. 'end="  "'은 print 함수가 끝나고 나서 줄바꿈이 아닌 두 번의 공백("  ")을 출력하라는 의미입니다.
+
+# 따라서, 이 코드는 'list_question'의 각 요소에 대해 'list_answer'의 모든 요소를 순서대로 번호와 함께 출력하게 됩니다. 이는 일종의 중첩된 반복 구조를 형성하며, 이러한 구조는 특정 작업을 여러 번 반복해야 할 때 유용합니다.
