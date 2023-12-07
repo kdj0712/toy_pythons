@@ -80,29 +80,29 @@ list_answer =  ["좋음", "중간", "좋아지길"]
 # 답항 가중 평균 : 
 # (1*3 + 1*2 +2*1) / (3+2+1) = 0.86
 list_qa = [0,0,0]
+# 입력받은 데이터의 횟수를 카운팅하기 위한 임의의 리스트를 작성하고 해당 값을 각 0회라고 선언하며 이는 0번째 0회, 1번쨰 0회, 2번째 0회이다.
 for num_question in range(len(list_question)) :           
     print("{} .{}".format(num_question + 1, list_question[num_question])) 
     for num_answer in range(len(list_answer)) :  
         print("{}. {}".format(num_answer + 1, list_answer[num_answer]), end=" ")
     print("")
-    num_qa = int(input("당신의 생각은 몇 번 인가요? : "))
+    num_qa = int(input("당신의 생각은 몇 번 인가요? : ")) # 입력받은 데이터를 숫자형 타입으로 변경하는 것을 num_qa로 선언한다.
     index_num_qa = num_qa - 1
+    # num_qa로 입력받은 값의 숫자는 list_qa에 선언된 값의 순서와 맞지 않으므로, 이를 매칭하기 위해 -1을 해 준뒤 index_num_qa라는 변수로 선언한다.
     list_qa[index_num_qa] = list_qa[index_num_qa] + 1
+    # 입력받은 데이터값인 index_num_qa를 list_qa에 삽입한다. 이 때 list_qa의 데이터 위치상의 순서와 맞는 해당 데이터의 값을 1을 증가시키는 역할을 한다.
   
-    if num_question != 3 :
-        print()
+    if num_question != 3 :     #위와 동일
+        print()             
         print("----------------")
     elif num_question == 3 :
         pass
+
 # 입력받은 값에 대한 횟수를 파악한 후 각 항목별 가중치를 부가하여 평균을 계산한 후 이를 출력한다.
-for num_qa in list_qa:
-    molecule = (list_qa[0]*3)+(list_qa[1]*2)+(list_qa[2]*1)
-    denominator = (list_qa[0]+list_qa[1]+list_qa[2])
-    result = molecule/denominator
-    # print("1.좋음 {}회, 2.중간 {}회, 3.좋아지길 {}회".format(list_qa[0],list_qa[1],list_qa[2]))
-    # result = (list_qa[0]*3)+(list_qa[1]*2)+(list_qa[2]*1)/(list_qa[0]+list_qa[1]+list_qa[2])
-    # print("답항 가중 평균 = {}".format(result))
+for num_qa in list_qa:           # 입력받은 값을 항목별 데이터의 입력받은 횟수로 반복적으로 계산하도록 명령
+    molecule = (list_qa[0]*3)+(list_qa[1]*2)+(list_qa[2]*1) # 입력받는 값을 이용하여 평균값을 계산할 때 분자를 계산하는 방식, 이를 molecule이라는 변수로 선언
+    denominator = (list_qa[0]+list_qa[1]+list_qa[2])        # 입력받는 값을 이용하여 평균값을 계산할 때 분자를 계산하는 방식, 이를 denominator라는 변수로 선언
+    result = molecule/denominator  # 각각 산출된 분자와 분모를 연산하여, 그 결과값을 result라는 변수로 선언한다.
     pass
-print("1.좋음 {}회, 2.중간 {}회, 3.좋아지길 {}회".format(list_qa[0],list_qa[1],list_qa[2]))
-print("답항 가중 평균 = {}".format(result))
-    
+print("1.좋음 {}회, 2.중간 {}회, 3.좋아지길 {}회".format(list_qa[0],list_qa[1],list_qa[2])) # 입력한 값의 횟수를 출력하도록 지정한 list_qa의 데이터값의 위치를 지정한다.
+print("답항 가중 평균 = {}".format(result)) # result로 계산한 값을 출력한다.
