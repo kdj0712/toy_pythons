@@ -31,6 +31,7 @@ list_answer =  ["좋음", "중간", "좋아지길"]
 
 
 for num_question in range(len(list_question)) : 
+    print("{} .{}".format(num_question + 1, list_question[num_question]))
     for num_answer in range(len(list_answer)) :
         print("{}. {}".format(num_answer + 1, list_answer[num_answer]), end="  ")
     if num_question != 3 :
