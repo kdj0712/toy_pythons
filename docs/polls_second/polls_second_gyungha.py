@@ -81,16 +81,18 @@ for num_question in range(len(list_question)) :
     num_question_result = int(str_question_result)
     index = num_question_result - 1
     list_statistics[index] = list_statistics[index] + 1 
-    print("--------통계--------")
-    print("설문자 답항별 갯수 표시 : {}".format(list_statistics))
-    print("답변별 가중치: (좋음 : 3, 중간 : 2, 좋아지길 : 1)")
-    num_average = (list_statistics[0]*3 + list_statistics[1]*2 + list_statistics[2]*1) / (list_statistics[0] +list_statistics[1] +list_statistics[2] )
-    print("답항 가중 평균 : ({}*3 + {}*2 + {}*1) / ({} + {} + {}) = {}".format(list_statistics[0], list_statistics[1], list_statistics[2],list_statistics[0],list_statistics[1], list_statistics[2], num_average))
+
+
     if num_question != 3 :
         print("")
         print("----------------")
     elif num_question == 3 :
         break
+print("--------통계--------")
+print("설문자 답항별 갯수 표시 : {}".format(list_statistics))
+print("답변별 가중치: (좋음 : 3, 중간 : 2, 좋아지길 : 1)")
+num_average = (list_statistics[0]*3 + list_statistics[1]*2 + list_statistics[2]*1) / (list_statistics[0] +list_statistics[1] +list_statistics[2] )
+print("답항 가중 평균 : ({}*3 + {}*2 + {}*1) / ({} + {} + {}) = {}".format(list_statistics[0], list_statistics[1], list_statistics[2],list_statistics[0],list_statistics[1], list_statistics[2], num_average))
     
 
 
