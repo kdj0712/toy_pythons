@@ -44,6 +44,7 @@ for num_question in range(len(list_question)) :
 # 이 부분은 'list_question'이라는 리스트의 길이만큼 반복을 할 것이라는 뜻 /# 'len' 함수는 리스트의 길이를 반환하고, 'range' 함수는 0부터 인자로 받은 숫자 - 1 까지의 일련의 정수를 반환 /  #따라서 이 코드는 'list_question'의 모든 요소에 대하여 반복을 수행
 
 #  이 코드는 'list_question'의 각 요소를 순서대로 화면에 출력하며, 각 요소 앞에는 1부터 시작하는 숫자가 붙습니다
+# list_question[num_question] => list_question의 첫번째 ,두번 째 ...
 
 # 반복문으로, 'list_answer'라는 리스트의 길이만큼 반복을 할 것이라는 뜻. 이 코드는 'list_answer'의 모든 요소에 대하여 반복을 수행
 
