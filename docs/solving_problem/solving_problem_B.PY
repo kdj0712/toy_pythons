@@ -3,7 +3,7 @@ def match_point(correct_list, answer_list, question_grade):
     for i in range(len(correct_list)):
         if correct_list[i] == answer_list[i]:
             result.append((question_grade[i],True))
-      return result
+        return result
 
 def check_answers():
     question_grade = []
