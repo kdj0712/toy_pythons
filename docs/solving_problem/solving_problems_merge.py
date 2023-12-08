@@ -29,9 +29,9 @@ def match_point(correct_list, answer_list, question_grade):  #맞은 문제에 �
 
 
 def check_answers():
-    # question_grade = [10,15,10,5]
-    # correct_list = [2,1,1,2]  
-    # answer_list = [2,1,1,4]     #확인용 임시 변수(list) 삭제
+    question_grade = [10,15,10,5]
+    correct_list = [2,1,1,2]  
+    answer_list = []     #확인용 임시 변수(list) 삭제
     result = match_point(correct_list, answer_list, question_grade)
     sum, right = calculate_score(result)
     str_grade = grade(sum)
