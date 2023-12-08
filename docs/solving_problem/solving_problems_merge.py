@@ -22,7 +22,7 @@ print("{}".format(answer_list))
 
 
 
-def match_point(correct_list, answer_list, question_grade):#맞은 문제에 대한 정답 확인
+def match_point(correct_list, answer_list, question_grade):  #맞은 문제에 대한 정답 확인
     result = []
     for i in range(len(correct_list)):
         if correct_list[i] == answer_list[i]:
