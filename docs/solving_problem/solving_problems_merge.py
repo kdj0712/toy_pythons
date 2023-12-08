@@ -16,6 +16,8 @@ for i in range(len(list_question)) :
     answer_list[i] = get_num
     pass
 print("{}".format(answer_list)) 
+
+
 def match_point(correct_list, answer_list, question_grade):
     result = []
     for i in range(len(correct_list)):
