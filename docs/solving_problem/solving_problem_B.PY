@@ -3,12 +3,12 @@ def match_point(correct_list, answer_list, question_grade):
     for i in range(len(correct_list)):
         if correct_list[i] == answer_list[i]:
             result.append((question_grade[i],True))
-      return result
+    return result
 
 def check_answers():
-    question_grade = []
-    correct_list = []  # 정답 리스트를 정의합니다.
-    answer_list = []  # 사용자의 입력 리스트를 초기화합니다.
+    question_grade = [10,15,10,5]
+    correct_list = [2,1,1,2]  
+    answer_list = [3,1,1,4]  
     result = match_point(correct_list, answer_list, question_grade)
     sum, right = calculate_score(result)
     str_grade = grade(sum)
@@ -27,12 +27,13 @@ def calculate_score(data):
     
 
 def grade(sum):
-    while True:
-        my_grade = ''
-        if sum >= 30:
-            my_grade = 'A'
-        elif sum > 20:
-            my_grade = 'B'
-        else:
-            my_grade = 'F'
-        return my_grade
+    my_grade = ''
+    if sum >= 30:
+        my_grade = 'A'
+    elif sum > 20:
+        my_grade = 'B'
+    else:
+        my_grade = 'F'
+    return my_grade
+
+check_answers()
