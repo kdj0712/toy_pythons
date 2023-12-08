@@ -5,10 +5,11 @@ def match_point(correct_list, answer_list, question_grade):
             result.append((question_grade[i],True))
     return result
 
+
 def check_answers():
     question_grade = [10,15,10,5]
     correct_list = [2,1,1,2]  
-    answer_list = [3,1,1,4]  
+    answer_list = [2,1,1,4]  
     result = match_point(correct_list, answer_list, question_grade)
     sum, right = calculate_score(result)
     str_grade = grade(sum)
