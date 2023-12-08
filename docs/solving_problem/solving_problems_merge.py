@@ -1,3 +1,4 @@
+# 출제 문제
 list_question = ["1. 문제: Python에서 변수를 선언하는 방법은? (점수: 10점)", 
                  "2. 문제: Python에서 리스트(List)의 특징은 무엇인가요? (점수: 15점)", 
                  "3. 문제: Python에서 조건문을 작성하는 방법은? (점수: 10점)", 
@@ -19,7 +20,7 @@ print("{}".format(answer_list))
 
 
 
-def match_point(correct_list, answer_list, question_grade):#맞은 문제에 대한 정답 확인
+def match_point(correct_list, answer_list, question_grade):  #맞은 문제에 대한 정답 확인
     result = []
     for i in range(len(correct_list)):
         if correct_list[i] == answer_list[i]:
