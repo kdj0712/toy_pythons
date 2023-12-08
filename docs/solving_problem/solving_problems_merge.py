@@ -9,7 +9,7 @@ list_option = ["1) var name, 2) name = value, 3) set name, 4) name == value",
 
 correct_list = [2,1,1,2]  # 원래 각 문항 별 정답의 리스트를 추가
 question_grade = [10,15,10,5] # 각 문항별 배점의 현황을 별도의 list를 생성하여 기재
-answer_list = [0,0,0,0]  #입력받은 정답 리스트 .
+answer_list = [0,0,0,0]  #입력받은 정답 리스트 
 
 
 for i in range(len(list_question)) :
@@ -21,6 +21,7 @@ for i in range(len(list_question)) :
 print("{}".format(answer_list)) 
 
 
+
 def match_point(correct_list, answer_list, question_grade):  #맞은 문제에 대한 정답 확인
     result = []
     for i in range(len(correct_list)):
@@ -30,9 +31,9 @@ def match_point(correct_list, answer_list, question_grade):  #맞은 문제에 �
 
 
 def check_answers():
-    question_grade = [10,15,10,5]
-    correct_list = [2,1,1,2]  
-    answer_list = []     #확인용 임시 변수(list) 삭제
+    # question_grade = [10,15,10,5]
+    # correct_list = [2,1,1,2]  
+    # answer_list = [2,1,1,4]     #확인용 임시 변수(list) 삭제
     result = match_point(correct_list, answer_list, question_grade)
     sum, right = calculate_score(result)
     str_grade = grade(sum)
