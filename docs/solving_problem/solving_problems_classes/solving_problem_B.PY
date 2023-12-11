@@ -1,38 +1,6 @@
-list_question = ["1. 문제: Python에서 변수를 선언하는 방법은?", 
-                 "2. 문제: Python에서 리스트(List)의 특징은 무엇인가요?", 
-                 "3. 문제: Python에서 조건문을 작성하는 방법은?", 
-                 "4. 문제: Python에서 함수를 정의하는 방법은?"]
-           
-list_option = ["1) var name, 2) name = value, 3) set name, 4) name == value", 
-               "1) 순서가 있고 변경 가능하다, 2) 중복된 값을 가질 수 없다, 3) 원소를 추가하거나 삭제할 수 없다, 4) 정렬된 상태로 유지된다", 
-               "1) if-else, 2) for-in, 3) while, 4) def", "1) class, 2) def, 3) import, 4) return"]
-
-        
-
-class Quiz:
-    def __init__(self, list_question, list_option): 
-        self.list_question = list_question
-        self.list_option = list_option
-        self.correct_list = [2,1,1,2] 
-        self.question_grade = [10,15,10,5]
-        self.answer_list = []
-
-    def print_question(self):
-        for i in range(len(list_question)) :
-            print("{}".format(list_question[i]))
-            print("{}".format(list_option[i]))
-            get_num = int(input("정답 : "))
-            self.answer_list.append(get_num)
- 
-        print("입력하신 문항 별 정답 번호 : {}".format(self.answer_list))
-        return self.answer_list, self.question_grade, self.correct_list
-# 아래에서 연산이 가능하도록 리턴할 값 추가
-quiz = Quiz(list_question, list_option) #클래스를 인용할 수 있도록 변수로 지정
 
 class solving_problem_b: # 하위 function들을 내재한 solving_problem_b라는 클래스를 선언한다.
-    def __init__(self,quiz):
-        self.quiz = quiz
-
+        
     def match_point(self, correct_list, answer_list, question_grade): #호출할 수 있도록 match_point라는 function을 정의한 뒤 클래스에 속해있다는 의미로 self라는 키워드를 부여한다.
     #맞은 문제에 대한 정답을 확인(정답의 값과 입력받은 정답의 값, 문항 별 점수의 값을 호출)하는 함수를 만든다.
         result = [] # 배점들의 값을 입력받을수 있는 result라는 리스트의 변수를 지정
@@ -46,10 +14,9 @@ class solving_problem_b: # 하위 function들을 내재한 solving_problem_b라�
 
     def check_answers(self): #호출할 수 있도록 check_answers라는 function을 정의한 뒤 클래스에 속해있다는 의미로 self라는 키워드를 부여한다.
         #입력한 답이 정답이 맞는지 확인한다.
-        # question_grade = [10,15,10,5]
-        # correct_list = [2,1,1,2]  
-        # answer_list = [2,1,1,4]     #확인용 임시 변수(list) 주석 처리
-        answer_list, question_grade, correct_list = self.quiz.print_question() # 위의 클래스에서 리턴된 값을 부르도록 설정한다.
+        question_grade = [10,15,10,5]
+        correct_list = [2,1,1,2]  
+        answer_list = [2,1,1,4]     #확인용 임시 변수(list) 주석 처리
         result = self.match_point(correct_list, answer_list, question_grade)
         # 다른 function들의 호출을 위해 같은 클래스 안에 있을 function들에 부여된 self라는 값을 준 뒤 호출하도록한다.
         # 위의 '맞은 문제에 대한 정답을 확인한 함수'를 호출한 뒤 사용자가 입력한 값이 정답인지 아닌지를 판단하고 결과값을 result라는 변수에 부여
@@ -79,9 +46,7 @@ class solving_problem_b: # 하위 function들을 내재한 solving_problem_b라�
             my_grade = 'B'
         else:                     # 윗 구문에 해당되는 영역의 점수가 아닌지 확인
             my_grade = 'F'        
-        return my_grade # check_answer()함수에 인용할 값을 반환
-    
+        return my_grade # check_answer()함수에 인용할 
 
-solving = solving_problem_b(quiz) # 인용한 값을 가져올 다른 클래스를 같이 선언
+solving = solving_problem_b()
 solving.check_answers()
-
