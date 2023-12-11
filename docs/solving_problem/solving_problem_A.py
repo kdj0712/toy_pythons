@@ -39,7 +39,7 @@ for i in range(len(list_question)) :
     answer_list[i] = get_num
     pass
 print("{}".format(answer_list)) 
-    
+
 
 
 # for 루프를 사용하여 list_question의 각 요소를 출력
