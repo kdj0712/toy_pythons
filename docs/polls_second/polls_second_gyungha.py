@@ -63,11 +63,11 @@ for num_question in range(len(list_question)) :
     list_statistics[index] = list_statistics[index] + 1 
 
 
-    if num_question != 3 :
-        print("")
-        print("----------------")
-    elif num_question == 3 :
-        break
+    # if num_question != 3 :
+    #     print("")
+    #     print("----------------")
+    # elif num_question == 3 :
+    #     break
 print("--------통계--------")
 print("설문자 답항별 갯수 표시 : {}".format(list_statistics))
 print("답변별 가중치: (좋음 : 3, 중간 : 2, 좋아지길 : 1)")
